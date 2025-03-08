@@ -5,11 +5,22 @@ import javax.swing.JOptionPane;
 public class RollerCoaster {
 
 	// 1) Make a main method that includes all the steps below…. 
+	public static void main(String[]args) {
+		String heightToRide = JOptionPane.showInputDialog("Enter your height in inches: ");
+		int heightToRideInt = Integer.parseInt(heightToRide);
+		
+	
 		
 		// 2) Ask the user to enter their height in inches using JOptionPane and set it to the variable heightToRide
 		
 		// Uncomment the line below...
-			//if( heightToRide > 42 ) { }
+			if( heightToRideInt >= 48 ) {
+				JOptionPane.showMessageDialog(null, "Hurray! You are tall enough to ride the coaster alone!");
+			} else if(heightToRideInt>=42){
+				JOptionPane.showMessageDialog(null,"You can ride the coaster with someone else!");
+			} else {
+				JOptionPane.showMessageDialog(null, "You must be at least 42 inches tall to ride the roller coaster pal!");
+			}
 		
 		// Do you see the heightToRide > 42 underlined red? That is because you are comparing a STRING to an INTEGER.
 		
@@ -23,3 +34,4 @@ public class RollerCoaster {
 	
 		// 6) else print: "You must be at least 42 inches tall to ride the roller coaster pal!"
 } 
+}
